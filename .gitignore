@@ -1,0 +1,21 @@
+node_modules/
+**/node_modules/
+dist/
+coverage/
+.audit/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.log
+
+# Java / Maven
+target/
+*.class
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
