@@ -1,0 +1,27 @@
+{
+  "name": "@examflow/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "build": "node --check src/app.js && node --check src/server.js && node --check src/auth/routes.js && node --check src/quizzes/routes.js && node --check src/attempts/routes.js && node --check src/attempts/finalize.js && node --check src/results/routes.js && node --check src/models/OutboxEvent.js && node --check src/realtime/tcp-client.js && node --check src/realtime/java-bridge.js && node --check src/realtime/routes.js",
+    "test": "node --test src/auth/auth.test.js src/quizzes/quizzes.test.js src/attempts/attempts.test.js",
+    "test:realtime": "node --test src/realtime/realtime.integration.test.js",
+    "seed:teacher": "node scripts/seed-teacher.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.4",
+    "express-session": "^1.19.0",
+    "mongoose": "^8.18.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.2"
+  }
+}
