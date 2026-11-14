@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-14T02:47:05.875Z",
+  "browser": "157.0.8103.51",
+  "base": "http://localhost:5173",
+  "quizId": "6af7cb6521f8f8d74df9ff51",
+  "attemptIds": [
+    "6af7cb6721f8f8d74df9ffa3",
+    "6af7cb6721f8f8d74df9ffc5"
+  ],
+  "results": [
+    {
+      "name": "AT-01 distinct portals at 360/390/768/1366/1440 px",
+      "status": "PASS",
+      "ms": 426,
+      "detail": [
+        {
+          "role": "student",
+          "viewport": 360,
+          "content": 360
+        },
+        {
+          "role": "student",
+          "viewport": 390,
+          "content": 390
+        },
+        {
+          "role": "student",
+          "viewport": 768,
+          "content": 768
+        },
+        {
+          "role": "student",
+          "viewport": 1366,
+          "content": 1366
+        },
+        {
+          "role": "student",
+          "viewport": 1440,
+          "content": 1440
+        },
+        {
+          "role": "teacher",
+          "viewport": 360,
+          "content": 360
+        },
+        {
+          "role": "teacher",
+          "viewport": 390,
+          "content": 390
+        },
+        {
+          "role": "teacher",
+          "viewport": 768,
+          "content": 768
+        },
+        {
+          "role": "teacher",
+          "viewport": 1366,
+          "content": 1366
+        },
+        {
+          "role": "teacher",
+          "viewport": 1440,
+          "content": 1440
+        }
+      ]
+    },
+    {
+      "name": "AT-03 UI registration and independent student sessions",
+      "status": "PASS",
+      "ms": 3029
+    },
+    {
+      "name": "Protected routes redirect cross-role browser navigation",
+      "status": "PASS",
+      "ms": 559
+    },
+    {
+      "name": "AT-04 teacher creates and previews three MCQs in UI",
+      "status": "PASS",
+      "ms": 2079
+    },
+    {
+      "name": "AT-05 both logged-in students receive Java-origin quiz start",
+      "status": "PASS",
+      "ms": 203
+    },
+    {
+      "name": "AT-06 two joins, save/replace/reload answers, server deadlines",
+      "status": "PASS",
+      "ms": 1813
+    },
+    {
+      "name": "AT-13 360 px touch navigation and answer save failure/retry",
+      "status": "PASS",
+      "ms": 322,
+      "detail": {
+        "viewport": 360,
+        "content": 360,
+        "touchTargetHeight": 66,
+        "touchEmulation": true,
+        "physicalDevice": false
+      }
+    },
+    {
+      "name": "AT-07 manual submission, official score and stable duplicate",
+      "status": "PASS",
+      "ms": 390
+    },
+    {
+      "name": "AT-10 native EventSource reconnect refreshes canonical attempt after teacher end",
+      "status": "PASS",
+      "ms": 429
+    },
+    {
+      "name": "AT-09 live teacher end finalizes and updates both browsers through SSE",
+      "status": "PASS",
+      "ms": 637
+    },
+    {
+      "name": "AT-08 real one-minute expiry worker with no browser submission",
+      "status": "PASS",
+      "ms": 62844
+    },
+    {
+      "name": "AT-12 result privacy and teacher results review",
+      "status": "PASS",
+      "ms": 484
+    },
+    {
+      "name": "AT-14 built browser flow opens zero WebSocket connections",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "webSockets": [],
+        "uncaughtPageErrors": []
+      }
+    }
+  ]
+}
