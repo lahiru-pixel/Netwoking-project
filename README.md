@@ -90,6 +90,14 @@ For editing, `npm run dev` starts React development and the API; Java/MongoDB
 remain separate. Do not run preview and development on the same port.
 `npm run start:all` starts three development processes, **not MongoDB**.
 
+On Windows, use `npm run start:local` to start all three development processes
+with Java and Maven configured automatically. It uses `JAVA_HOME`/PATH when
+available, or this machine's installed JetBrains Java runtime and local Maven
+under `.tools`. Keep the terminal open; Ctrl+C stops the three processes.
+Use this instead of starting another API or web process on the same ports.
+If the API is already running and only Java is missing, run
+`npm run start:local -- -Service java` in a separate terminal.
+
 ## Accounts and exams
 
 - Student registration/login: `/student/register`, `/student/login`.
@@ -157,6 +165,7 @@ Wi-Fi interface. Physical Android/iOS and LAN firewall traversal are unverified.
 | Symptom | Action |
 |---|---|
 | Java/Maven not recognized | Set JDK 21 JAVA_HOME and Maven bin on PATH |
+| `ECONNREFUSED 127.0.0.1:9090` | The Java TCP service is not listening. On Windows, run `npm run start:local -- -Service java` in a separate terminal and keep it open (elsewhere, use `npm run start:java` with Java/Maven on PATH). Wait for its listening message; the API reconnects automatically. `npm run start:api` starts only the API. |
 | API exits | Check local MongoDB, URI and separate valid secrets |
 | Java AUTH_FAILED | Ensure both services loaded the same TCP secret |
 | Notifications pending | Check Java logs and outboxEvents; REST remains authoritative |

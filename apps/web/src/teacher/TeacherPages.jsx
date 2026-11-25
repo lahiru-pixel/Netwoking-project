@@ -641,7 +641,8 @@ function createEmptyQuestion(order = 1) {
   return {
     text: "",
     options: Array.from({ length: 4 }, (_, index) => ({
-      id: crypto.randomUUID(),
+      // IDs only need to be unique within this question; work on LAN HTTP too.
+      id: `option-${index + 1}`,
       text: "",
       label: String.fromCharCode(65 + index),
     })),

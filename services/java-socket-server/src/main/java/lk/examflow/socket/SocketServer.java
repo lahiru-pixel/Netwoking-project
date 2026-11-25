@@ -5,16 +5,14 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.util.concurrent.CountDownLatch;
 
-// Starting point of the Java TCP server. Node.js connects here as the gateway;
-// browsers connect through Node.js, not directly to this server.
+
 public final class SocketServer {
     private SocketServer() {
     }
 
-    // Read the settings, start the server, and keep it running.
+
     public static void main(String[] args) throws Exception {
-        // Environment variables let us change settings without editing Java code.
-        // Use the local IP address and port 9090 when no values are provided.
+        
         String host = System.getenv().getOrDefault("JAVA_TCP_HOST", "127.0.0.1");
         int port = Integer.parseInt(System.getenv().getOrDefault("JAVA_TCP_PORT", "9090"));
         // The gateway must send this same secret to prove it is trusted.

@@ -18,7 +18,9 @@
     "test:realtime": "npm run test:realtime --workspace apps/api",
     "test:outage": "node --test apps/api/src/realtime/outage.integration.test.js",
     "test:browser": "node scripts/browser-audit.mjs",
+    "test:question-form": "node --test scripts/question-form.test.mjs",
     "start:web": "npm run preview --workspace apps/web",
+    "start:local": "powershell.exe -NoProfile -File scripts/start-local.ps1",
     "start:api": "npm run start --workspace apps/api",
     "start:java": "dotenv -e .env -- mvn -f services/java-socket-server/pom.xml compile exec:java -Dexec.mainClass=lk.examflow.socket.SocketServer",
     "start:all": "concurrently -k -n web,api,java -c blue,green,yellow \"npm:dev:web\" \"npm:dev:api\" \"npm:start:java\""
